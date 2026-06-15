@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
 import './globals.css';
 import Sidebar from '@/components/Sidebar';
+import Tutorial from '@/components/Tutorial';
 import { db } from '@/lib/db';
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="flex-1 min-h-screen overflow-auto">
           {children}
         </main>
+        <Tutorial />
       </body>
     </html>
   );
